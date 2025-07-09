@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天野博 - エンジニア・訪問看護経営者 ポートフォリオ</title>
+    <meta name="description" content="訪問看護ステーション経営者。React/TypeScript、AppSheet/GASでの業務改善、AI活用を通じてITで課題解決を目指すエンジニア">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navigation">
+                <h1 class="logo">Hiroshi Amano</h1>
+                <ul class="nav-menu">
+                    <li><a href="#about">プロフィール</a></li>
+                    <li><a href="#skills">スキル</a></li>
+                    <li><a href="#works">実績</a></li>
+                    <li><a href="#experience">経験</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">天野博</h2>
+                    <p class="hero-subtitle">エンジニア・訪問看護経営者</p>
+                    <p class="hero-description">
+                        訪問看護の現場知識を活かし、ITで課題解決することにやりがいを感じています。<br>
+                        React/TypeScript、AI技術の学習に注力し、実務で貢献できるエンジニアを目指しています。
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#works" class="btn btn-primary">実績を見る</a>
+                        <a href="#contact" class="btn btn-secondary">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">プロフィール</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>現場知識を活かしたITソリューションの提供</h3>
+                        <p>
+                            現在訪問看護ステーションの経営をしております。訪問看護の現場知識を活かし、
+                            ITで課題解決することにやりがいを感じています。
+                        </p>
+                        <p>
+                            現在はReactやTypeScript、AI関連技術の学習に力を入れています。AppSheetやGASでの業務改善経験を土台に、
+                            新しい技術を積極的に吸収し、実務で貢献できるエンジニアを目指しています。
+                        </p>
+                        <ul class="about-highlights">
+                            <li>訪問看護事業：10年</li>
+                            <li>稼働時間：週 20時間程度</li>
+                            <li>Google Workspace：10年</li>
+                            <li>24時間以内返信</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">技術スキル</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3 class="skill-title">TypeScript/JavaScript/Python</h3>
+                        <div class="skill-level">
+                            <span class="level-bar" style="width: 40%"></span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>TypeScriptを使用したモダンな開発</li>
+                            <li>JavaScriptでのフロントエンド開発</li>
+                            <li>Pythonでのデータ処理・自動化</li>
+                            <li>paizaラーニング Pythonスキルチェック ランクB</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 class="skill-title">React/Node.js</h3>
+                        <div class="skill-level">
+                            <span class="level-bar" style="width: 40%"></span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>React(TypeScript)でのフロントエンド開発</li>
+                            <li>Node.jsによるバックエンドAPI開発</li>
+                            <li>Firebaseを活用した認証・データベース実装</li>
+                            <li>VercelでのデプロイとCI/CD運用</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 class="skill-title">AppSheet/Google Apps Script</h3>
+                        <div class="skill-level">
+                            <span class="level-bar" style="width: 60%"></span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>AppSheetでのノーコードアプリ開発</li>
+                            <li>GASを用いた定型業務の自動化</li>
+                            <li>請求データ作成・帳票自動生成</li>
+                            <li>月間40時間の作業時間削減実績</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 class="skill-title">AI/API/Google Workspace</h3>
+                        <div class="skill-level">
+                            <span class="level-bar" style="width: 70%"></span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>Gemini API、OpenAI APIの活用</li>
+                            <li>Google Workspace 10年の運用経験</li>
+                            <li>Cursor、Claude等のAIツール活用</li>
+                            <li>Git/GitHubによるバージョン管理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="container">
+                <h2 class="section-title">制作実績</h2>
+                <div class="works-tabs">
+                    <button class="tab-button active" data-category="all">すべて</button>
+                    <button class="tab-button" data-category="react">React開発</button>
+                    <button class="tab-button" data-category="appsheet">AppSheet</button>
+                    <button class="tab-button" data-category="gas">業務効率化</button>
+                </div>
+                <div class="works-grid">
+                    <article class="work-item" data-category="react">
+                        <div class="work-image">
+                            <img src="https://via.placeholder.com/400x300/3498db/ffffff?text=Minori+Compass" alt="みのりコンパス">
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">みのりコンパス</h3>
+                            <p class="work-description">訪問看護のスケジュール管理を効率化するWebアプリケーション。React/TypeScriptでのフロントエンド開発を担当。</p>
+                            <div class="work-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-item" data-category="react">
+                        <div class="work-image">
+                            <img src="https://via.placeholder.com/400x300/e74c3c/ffffff?text=Contract+System" alt="電子契約システム">
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">社内向け電子契約システム</h3>
+                            <p class="work-description">契約書の作成から保管までをオンラインで完結。Gemini APIを活用した契約書内容の要約・チェック機能を実装。</p>
+                            <div class="work-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Gemini API</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-item" data-category="appsheet">
+                        <div class="work-image">
+                            <img src="https://via.placeholder.com/400x300/2ecc71/ffffff?text=AppSheet+App" alt="点呼AppSheetアプリ">
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">点呼AppSheetアプリ</h3>
+                            <p class="work-description">訪問看護の記録をスマートフォンで完結できるアプリ。利用者管理・訪問記録機能をノーコードで実装。</p>
+                            <div class="work-tech">
+                                <span class="tech-tag">AppSheet</span>
+                                <span class="tech-tag">Google Spreadsheet</span>
+                                <span class="tech-tag">ペーパーレス化</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-item" data-category="gas">
+                        <div class="work-image">
+                            <img src="https://via.placeholder.com/400x300/f39c12/ffffff?text=Automation+Tools" alt="業務自動化ツール">
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">請求データ自動生成システム</h3>
+                            <p class="work-description">GASを使用した定型業務の自動化。請求データ作成、報告書フォーマット生成などで月間40時間の作業時間削減を実現。</p>
+                            <div class="work-tech">
+                                <span class="tech-tag">Google Apps Script</span>
+                                <span class="tech-tag">Google Workspace</span>
+                                <span class="tech-tag">自動化</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">経験・実績</h2>
+                <div class="experience-content">
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025年2月-現在</div>
+                            <div class="timeline-content">
+                                <h3>自社アプリケーション開発</h3>
+                                <p>社内向け自社アプリケーションのシステム開発を担当。</p>
+                                <ul>
+                                    <li>React(TypeScript)でのフロントエンド開発</li>
+                                    <li>Firebase、Gemini APIを活用した機能実装</li>
+                                    <li>契約業務のDX化を推進</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2015年2月-現在</div>
+                            <div class="timeline-content">
+                                <h3>業務効率化ツールの開発・運用</h3>
+                                <p>AGO株式会社にて社内SE/業務改善担当として活動。</p>
+                                <ul>
+                                    <li>AppSheetでの利用者管理・訪問記録アプリ開発</li>
+                                    <li>GASによる月間40時間の作業時間削減</li>
+                                    <li>Google Workspaceの管理・運用</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2015年2月-現在</div>
+                            <div class="timeline-content">
+                                <h3>訪問看護事業 AGO株式会社 経営</h3>
+                                <p>訪問看護ステーションの経営を行いながら、ITを活用した業務改善を推進。</p>
+                                <ul>
+                                    <li>現場の課題をITで解決</li>
+                                    <li>ペーパーレス化の実現</li>
+                                    <li>業務効率化でコスト削減</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10年</div>
+                            <div class="stat-label">訪問看護事業</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">40時間</div>
+                            <div class="stat-label">月間作業時間削減</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">週 20時間</div>
+                            <div class="stat-label">稼働可能時間</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24時間以内</div>
+                            <div class="stat-label">返信対応</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ</h2>
+                <div class="contact-content">
+                    <p class="contact-description">
+                        お仕事のご依頼・ご相談はお気軽にお問い合わせください。<br>
+                        原則として24時間以内に返信いたします。
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>メールアドレス</h3>
+                            <p>contact@example.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>稼働時間</h3>
+                            <p>週 20時間程度</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>希望単価</h3>
+                            <p>時給 2,000円〜</p>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">お名前</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">メールアドレス</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="project">プロジェクトの種類</label>
+                            <select id="project" name="project">
+                                <option value="">選択してください</option>
+                                <option value="react">React/TypeScript開発</option>
+                                <option value="appsheet">AppSheet開発</option>
+                                <option value="gas">業務自動化(GAS)</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">メッセージ</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">送信する</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Hiroshi Amano. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
