@@ -1,0 +1,809 @@
+/* ミニマルデザイン CSS */
+
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS変数 */
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --accent-color: #0066cc;
+    --bg-color: #fff;
+    --light-bg: #f8f8f8;
+    --border-color: #e0e0e0;
+    --max-width: 1200px;
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+}
+
+/* 基本スタイル */
+body {
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー */
+.header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* ヒーローセクション */
+.hero {
+    padding: 200px 0 100px;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.hero-tagline {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-bottom: 60px;
+}
+
+.hero-strengths {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.strength-item {
+    padding: 0;
+}
+
+.strength-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.strength-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.strength-item p {
+    font-size: 14px;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.hero-availability {
+    margin-bottom: 40px;
+}
+
+.availability-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #000;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* セクション共通 */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* ビジョンセクション */
+.vision {
+    background-color: var(--light-bg);
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vision-box {
+    background-color: var(--bg-color);
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.vision-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.vision-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.vision-goals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.goal-item {
+    text-align: center;
+}
+
+.goal-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.goal-item h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.goal-item p {
+    font-size: 14px;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* アバウトセクション */
+.about {
+    background-color: var(--bg-color);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.about-highlights {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.about-highlights li {
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* スキルセクション */
+.skills {
+    background-color: var(--light-bg);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.skill-card {
+    background-color: var(--bg-color);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.skill-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.skill-level {
+    width: 100%;
+    height: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.level-bar {
+    display: block;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: width 1s ease;
+}
+
+.skill-details {
+    list-style: none;
+}
+
+.skill-details li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.skill-details li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+}
+
+/* 自己投資セクション */
+.investment {
+    background-color: var(--bg-color);
+}
+
+.investment-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.investment-intro {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 50px;
+    color: var(--secondary-color);
+}
+
+.investment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.investment-card {
+    padding: 40px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+
+.investment-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.investment-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.investment-card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.investment-list {
+    list-style: none;
+}
+
+.investment-list li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.investment-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+}
+
+/* 実績セクション */
+.works {
+    background-color: var(--light-bg);
+}
+
+.works-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.tab-button {
+    padding: 8px 20px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.tab-button:hover {
+    border-color: var(--primary-color);
+}
+
+.tab-button.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.work-item {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+}
+
+.work-image {
+    width: 100%;
+    height: 240px;
+    background-color: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: var(--border-color);
+}
+
+.work-content {
+    padding: 30px;
+}
+
+.work-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.work-description {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.work-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+/* 経験セクション */
+.experience {
+    background-color: var(--bg-color);
+}
+
+.experience-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 16px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: var(--border-color);
+}
+
+.timeline-item:last-child::after {
+    display: none;
+}
+
+.timeline-year {
+    color: var(--secondary-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.timeline-content ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.timeline-content li {
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.timeline-content li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+}
+
+.experience-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    color: var(--secondary-color);
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* コンタクトセクション */
+.contact {
+    background-color: var(--light-bg);
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-description {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.health-status {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.health-status h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.health-status p {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.contact-form {
+    background-color: var(--bg-color);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* フッター */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: all 0.3s;
+    }
+    
+    .hero {
+        padding: 150px 0 80px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-strengths {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .vision-goals,
+    .about-highlights,
+    .skills-grid,
+    .investment-grid,
+    .works-grid,
+    .experience-content,
+    .experience-stats,
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}

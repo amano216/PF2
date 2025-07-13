@@ -53,7 +53,8 @@ $(document).ready(function() {
             const elementTop = $(this).offset().top;
             const windowBottom = $(window).scrollTop() + $(window).height();
             
-            if (elementTop < windowBottom) {
+            if (elementTop < windowBottom && !$(this).hasClass('animated')) {
+                $(this).addClass('animated');
                 $(this).find('.level-bar').css('width', function() {
                     return $(this).parent().find('.level-bar').attr('style').match(/width:\s*(\d+%)/)[1];
                 });
@@ -86,7 +87,7 @@ $(document).ready(function() {
 
     // 要素のフェードイン表示
     function fadeInOnScroll() {
-        $('.section-title, .work-item, .timeline-item, .stat-item').each(function() {
+        $('.section-title, .work-item, .timeline-item, .stat-item, .goal-item, .investment-card, .strength-item').each(function() {
             const elementTop = $(this).offset().top;
             const windowBottom = $(window).scrollTop() + $(window).height();
             
@@ -160,6 +161,75 @@ $(document).ready(function() {
 
     $(window).scroll(animateTimeline);
     animateTimeline(); // 初回実行
+
+    // ビジョンセクションのゴールアニメーション
+    function animateVisionGoals() {
+        $('.goal-item').each(function(index) {
+            const element = $(this);
+            const elementTop = element.offset().top;
+            const windowBottom = $(window).scrollTop() + $(window).height();
+            
+            if (elementTop < windowBottom - 50) {
+                setTimeout(function() {
+                    element.css({
+                        'opacity': '0',
+                        'transform': 'scale(0.8)'
+                    }).animate({
+                        'opacity': '1'
+                    }, 500).css({
+                        'transform': 'scale(1)',
+                        'transition': 'transform 0.5s ease'
+                    });
+                }, index * 150);
+            }
+        });
+    }
+
+    $(window).scroll(animateVisionGoals);
+    animateVisionGoals(); // 初回実行
+
+    // 投資カードのアニメーション
+    function animateInvestmentCards() {
+        $('.investment-card').each(function(index) {
+            const element = $(this);
+            const elementTop = element.offset().top;
+            const windowBottom = $(window).scrollTop() + $(window).height();
+            
+            if (elementTop < windowBottom - 50 && !element.hasClass('animated')) {
+                element.addClass('animated');
+                setTimeout(function() {
+                    element.css({
+                        'opacity': '0',
+                        'transform': 'translateX(' + (index % 2 === 0 ? '-50px' : '50px') + ')'
+                    }).animate({
+                        'opacity': '1'
+                    }, 600).css({
+                        'transform': 'translateX(0)',
+                        'transition': 'transform 0.6s ease'
+                    });
+                }, index * 100);
+            }
+        });
+    }
+
+    $(window).scroll(animateInvestmentCards);
+    animateInvestmentCards(); // 初回実行
+
+    // ヒーローセクションの強みアニメーション
+    $('.strength-item').each(function(index) {
+        $(this).css({
+            'opacity': '0',
+            'transform': 'translateY(30px)'
+        });
+        setTimeout(() => {
+            $(this).animate({
+                'opacity': '1'
+            }, 800).css({
+                'transform': 'translateY(0)',
+                'transition': 'transform 0.8s ease'
+            });
+        }, 300 + (index * 200));
+    });
 
     // モバイル対応：タッチイベント
     let touchStartX = 0;
